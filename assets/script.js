@@ -1,14 +1,24 @@
 $(document).ready(function(){
 
-	$('#content').waypoint(function(direction){
-		if (direction == "down") {
+	// $('#content').waypoint(function(direction){
+	// 	if (direction == "down") {
+	// 		$('#nav').addClass('sticky');
+	// 	} else {
+	// 		$('#nav').removeClass('sticky');
+	// 	}
+	// });
+
+	$(window).scroll(function() {
+		var height = $(window).scrollTop();
+		var navPoint = 780;
+		if (height >= navPoint) {
 			$('#nav').addClass('sticky');
 		} else {
 			$('#nav').removeClass('sticky');
 		}
 	});
 
-	$(document).ready(function(){
+	// $(document).ready(function(){
 	
 	$(".thumbnail").click(function() {
 		$("#modal-container").show();
@@ -24,9 +34,9 @@ $(document).ready(function(){
 	});
 
 
-	// $(window).resize(function() {
-	// 	vertCenter();
-	// });
+	$(window).resize(function() {
+		vertCenter();
+	});
 
 	// function vertCenter() {
 	// 	var newHeight = $('#me').parent('#about-content-container').height();

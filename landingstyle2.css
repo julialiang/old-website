@@ -24,7 +24,7 @@ div {
     background: rgba(0,0,0,0.5);
 }
 
-#modal-box {
+/*#modal-box {
     width: 500px;
     height: 260px;
     background-color: #5485BB;
@@ -42,7 +42,7 @@ div {
     padding-right: 20px;
     color: white;
     font-size: 20px;
-}
+}*/
 
 
 /*Home*/
@@ -79,6 +79,7 @@ div {
     color: white;
     width: 100%;
     height: 48px;
+    z-index: 1000;
 }
 
 .container {
@@ -89,6 +90,7 @@ div {
 
 #nav .container {
     padding-left: 10%;
+    box-sizing: border-box;
 }
 
 
@@ -140,7 +142,6 @@ div {
     top: calc(50% - 154px);
     position: relative;
  /*   height: 55%;*/
-    overflow: hidden;
     text-align: left;
 }
 
@@ -181,12 +182,12 @@ div {
     text-align: left;
     width: 15%;
     /*padding-left: calc(10% + 13px);*/
-    position: absolute;
+    position: relative;
     margin-left: 10%;
     color: white;
     top: 15%;
-    height: 100%;
     z-index: 4;
+    float: left;
 }
 
 .side-nav-item {
@@ -195,14 +196,12 @@ div {
 
 .portfolio-container {
     z-index: 2;
-    float: right;
+    float: left;
     position: relative;
     margin-top: 5%;
-    margin-right: 36px;
     top: 0;
-    overflow: scroll;
-    height: calc(100% - 48px - 5%);
-    width: auto;
+    /*max-height: calc(100% - 48px - 5%);*/
+    max-width: 65%;
 }
 
 #portfolio .container {
@@ -274,4 +273,12 @@ div {
 #photography {
    /* position: relative;*/
     display: none;
+}
+
+@media (max-width: 1024px) and (min-width: 768) {
+
+}
+
+@media (max-width: 667px) {
+    
 }
