@@ -1,22 +1,22 @@
 $(document).ready(function(){
 
-	// $('#content').waypoint(function(direction){
-	// 	if (direction == "down") {
-	// 		$('#nav').addClass('sticky');
-	// 	} else {
-	// 		$('#nav').removeClass('sticky');
-	// 	}
-	// });
-
-	$(window).scroll(function() {
-		var height = $(window).scrollTop();
-		var navPoint = 780;
-		if (height >= navPoint) {
+	$('#content').waypoint(function(direction){
+		if (direction == "down") {
 			$('#nav').addClass('sticky');
 		} else {
 			$('#nav').removeClass('sticky');
 		}
 	});
+
+	// $(window).scroll(function() {
+	// 	var height = $(window).scrollTop();
+	// 	var navPoint = 646;
+	// 	if (height >= navPoint) {
+	// 		$('#nav').addClass('sticky');
+	// 	} else {
+	// 		$('#nav').removeClass('sticky');
+	// 	}
+	// });
 
 	// $(document).ready(function(){
 	
