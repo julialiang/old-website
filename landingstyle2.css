@@ -54,7 +54,7 @@ div {
 
 .description {
     padding-left: 20px;
-    height: 100%;
+   /* height: 100%;*/
  /*   padding-right: 10px;*/
     width: 25%;
     background-color: white;
@@ -73,6 +73,8 @@ div {
 #modal-content .description {
     position: relative;
     float: left;
+    top: 50%;
+    transform: translate(0px, -50%);
 }
 
 #modal-content .exit {
@@ -190,6 +192,11 @@ img.img-scaled {
     width: 560px;
 }
 
+#modal-content .content{
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+
 #art-carousel {
     width: 3360px;
     height: 100%;
@@ -230,10 +237,10 @@ img.img-scaled {
 }
 
 #background {
-    /*background: url('assets/img/background3.png');
+    background: url('assets/img/background3.png');
     -webkit-background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;*/
+    background-position: center;
     width: 100%;
     height: 100%;
     position: fixed;
@@ -243,10 +250,10 @@ img.img-scaled {
 
 }
 
-/*#background-img {
+#wrapper {
     max-height: 100%;
     max-width: 100%;
-}*/
+}
 
 #background img {
     display: block;
@@ -479,9 +486,34 @@ img.img-scaled {
 }
 
 @media (max-width: 1024px) and (min-width: 768) {
+    #background {
+        background: url('assets/img/aboutme800.png');
+        -webkit-background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
 
 }
 
 @media (max-width: 667px) {
-
+    #background {
+        background: url('assets/img/aboutme800.png');
+        -webkit-background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
 }
+
+/*@media(1360, 575)*/
