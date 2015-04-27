@@ -13,55 +13,27 @@ $(document).ready(function(){
 		var el;
 
 		if (height > 0 && height < 641) {
-			el = document.getElementById("home-nav");
-			el.style.color = "white";
+			$('#home-nav').css("color", "white");
+			$('#about-nav').css("color", "#CBD8D7");
+			$('#portfolio-nav').css("color", "#CBD8D7");
+			$('#contact-nav').css("color", "#CBD8D7");
 
-			el = document.getElementById("about-nav");
-			el.style.color = "#CBD8D7";
+		} else if (height > 641 && height < 1191) {
+			$('#home-nav').css("color", "#CBD8D7");
+			$('#about-nav').css("color", "white");
+			$('#portfolio-nav').css("color", "#CBD8D7");
+			$('#contact-nav').css("color", "#CBD8D7");
 
-			el = document.getElementById("portfolio-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("contact-nav");
-			el.style.color = "#CBD8D7";
-
-		} else if (height > 641 && height < 1243) {
-			el = document.getElementById("home-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("about-nav");
-			el.style.color = "white";
-
-			el = document.getElementById("portfolio-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("contact-nav");
-			el.style.color = "#CBD8D7";
-
-		} else if (height > 1242 && height < 1784) {
-			el = document.getElementById("home-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("about-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("portfolio-nav");
-			el.style.color = "white";
-
-			el = document.getElementById("contact-nav");
-			el.style.color = "#CBD8D7";
+		} else if (height > 1191 && height < 1784) {
+			$('#home-nav').css("color", "#CBD8D7");
+			$('#about-nav').css("color", "#CBD8D7");
+			$('#portfolio-nav').css("color", "white");
+			$('#contact-nav').css("color", "#CBD8D7");
 		} else {
-			el = document.getElementById("home-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("about-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("portfolio-nav");
-			el.style.color = "#CBD8D7";
-
-			el = document.getElementById("contact-nav");
-			el.style.color = "white";
+			$('#home-nav').css("color", "#CBD8D7");
+			$('#about-nav').css("color", "#CBD8D7");
+			$('#portfolio-nav').css("color", "#CBD8D7");
+			$('#contact-nav').css("color", "white");
 		}
 	});
 
@@ -79,7 +51,19 @@ $(document).ready(function(){
 	
 	$(".thumbnail").click(function() {
 		$("#modal-container").show();
+		$("#carousel-container").show();
+		$("#art-carousel-container").hide();
+
 	});
+
+
+	$(".art-thumbnail").click(function() {
+		$("#modal-container").show();
+		$("#carousel-container").hide();
+		$("#art-carousel-container").show();
+
+	});
+
 
 	$(".exit").click(function() {
 		$("#modal-container").hide();
@@ -106,6 +90,24 @@ $(document).ready(function(){
             return false;
         } else {
             $('#carousel').css("margin-left", cur + 560);
+        }
+    });
+
+    $('#art-carousel-next').click(function() {
+        var cur = parseInt($('#art-carousel').css('margin-left').replace("px", ""));
+        if (cur === -2800) {
+            return false;
+        } else {
+            $('#art-carousel').css("margin-left", cur - 560);
+        }
+    });
+  //Implement the "slide to right" when the user clicks on #carousel-prev here
+    $('#art-carousel-prev').click(function() {
+        var cur = parseInt($('#art-carousel').css('margin-left').replace("px", ""));
+        if (cur === 0) {
+            return false;
+        } else {
+            $('#art-carousel').css("margin-left", cur + 560);
         }
     });
 

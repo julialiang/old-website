@@ -15,6 +15,7 @@ div {
     z-index: 10000;
     position: fixed;
     display: none;
+    overflow: hidden;
 
 }
 
@@ -59,6 +60,11 @@ div {
     background-color: white;
 }
 
+#modal-content {
+    height: 500px;
+    overflow: shidden;
+}
+
 #modal-content .content {
     position: relative;
     float: left;
@@ -74,7 +80,6 @@ div {
     /*float: left;*/
 }
 
-/* Styling for the carousel previous button */
 #carousel-prev {
     position: absolute;
     width: 40px;
@@ -92,8 +97,36 @@ div {
 
 }*/
 
-/* Styling for the carousel next button */
 #carousel-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    right: 3px;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+}
+
+#art-carousel-prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    left: 3px;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+}
+
+/*#carousel-prev:active {
+    background-color:;
+
+}*/
+
+#art-carousel-next {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -134,11 +167,35 @@ img.img-scaled {
     padding-left: 60px;
 }
 
+.art-carousel-item {
+    background-color: white;
+    width: 500px;
+    position: relative;
+    height: 100%;
+    float: left;
+    padding-left: 60px;
+}
+
 .nav-item:hover {
     /*background-color: white;
     color: #DDC144;*/
 }
 
+#art-carousel-container {
+    height: 500px;
+    overflow: hidden;
+}
+
+#modal-content {
+    width: 560px;
+}
+
+#art-carousel {
+    width: 3360px;
+    height: 100%;
+    margin-left: 0px;
+    -webkit-transition: all 0.3s;
+}
 /*.home-nav {
     width: 100%;
     height: 100%;
@@ -173,16 +230,29 @@ img.img-scaled {
 }
 
 #background {
-    background: url('assets/img/background.png');
+    /*background: url('assets/img/background3.png');
     -webkit-background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
     width: 100%;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    margin: 0 auto;
 
+}
+
+/*#background-img {
+    max-height: 100%;
+    max-width: 100%;
+}*/
+
+#background img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
 }
 
 #content {
@@ -192,7 +262,7 @@ img.img-scaled {
 }
 
 #nav {
-    background: rgba(76, 87, 101, 0.6);
+    background: #5F7A85;
     color: #CBD8D7;
     width: 100%;
     height: 48px;
@@ -302,7 +372,7 @@ img.img-scaled {
     position: relative;
     margin-left: 10%;
     color: white;
-    top: 15%;
+    margin-top: 5%;
     z-index: 4;
     float: left;
 }
@@ -343,6 +413,18 @@ img.img-scaled {
     width: 100%;
 }
 
+.art-thumbnail {
+    float: left;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.art-thumbnail img {
+    width: 100%;
+}
 
 
 /*Contact*/
@@ -378,6 +460,8 @@ img.img-scaled {
     width: auto;
     display: inline;
 }
+
+
 
 #design {
    /* position: relative;*/
