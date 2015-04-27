@@ -12,7 +12,7 @@ div {
 #modal-container {
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 10000;
     position: fixed;
     display: none;
 
@@ -24,26 +24,143 @@ div {
     background: rgba(0,0,0,0.5);
 }
 
-/*#modal-box {
-    width: 500px;
-    height: 260px;
-    background-color: #5485BB;
+#modal-box {
+    width: auto;
+    height: auto;
+    /*background-color: white;*/
     position: absolute;
     top: 50%;
     left: 50%;
-    margin: -130px 0 0 -250px;
-    z-index: 100;
+    transform: translate(-50%, -50%);
+    z-index: 1000000;
+    padding: 10px;
 }
 
-#modal-header {
-    padding-top: 27.5px;
-    padding-bottom: 20px;
+.content img {
+    max-height: 500px;
+    max-width: 300px;
+}
+
+.exit img {
+    max-height: 25px;
+}
+
+.exit {
+    float: right;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.description {
     padding-left: 20px;
-    padding-right: 20px;
-    color: white;
-    font-size: 20px;
+    height: 100%;
+ /*   padding-right: 10px;*/
+    width: 25%;
+    background-color: white;
+}
+
+#modal-content .content {
+    position: relative;
+    float: left;
+}
+
+#modal-content .description {
+    position: relative;
+    float: left;
+}
+
+#modal-content .exit {
+    position: relative;
+    /*float: left;*/
+}
+
+/* Styling for the carousel previous button */
+#carousel-prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    left: 3px;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+}
+
+/*#carousel-prev:active {
+    background-color:;
+
 }*/
 
+/* Styling for the carousel next button */
+#carousel-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    right: 3px;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+}
+
+img.img-scaled {
+    height: 30px;
+}
+
+#carousel-container {
+    width: 560px;
+    margin: 0 auto;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+#carousel {
+    width: 3360px;
+    height: 100%;
+    margin-left: 0px;
+    -webkit-transition: all 0.3s;
+
+}
+
+.carousel-item {
+    background-color: white;
+    width: 500px;
+    position: relative;
+    height: 100%;
+    float: left;
+    padding-left: 60px;
+}
+
+.nav-item:hover {
+    /*background-color: white;
+    color: #DDC144;*/
+}
+
+/*.home-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.about-nav {
+    width: 100%;
+    height: 100%;
+
+}
+
+.portfolio-nav {
+    width: 100%;
+    height: 100%;
+
+}
+
+.contact-nav {
+    width: 100%;
+    height: 100%;
+
+}*/
 
 /*Home*/
 #landing {
@@ -76,7 +193,7 @@ div {
 
 #nav {
     background: rgba(76, 87, 101, 0.6);
-    color: white;
+    color: #CBD8D7;
     width: 100%;
     height: 48px;
     z-index: 1000;
@@ -101,11 +218,12 @@ div {
 
 
 .nav-item {
-    padding: 13px 0;
+    padding: 13px 10px;
     position: relative;
     float: left;
     font-size: 16px;
     margin-right: 36px;
+    z-index: 1001;
 }
 
 
@@ -180,8 +298,7 @@ div {
 
 #side-nav {
     text-align: left;
-    width: 15%;
-    /*padding-left: calc(10% + 13px);*/
+    width: 10%;
     position: relative;
     margin-left: 10%;
     color: white;
@@ -190,8 +307,14 @@ div {
     float: left;
 }
 
+.side-nav-item:hover {
+    background-color: white;
+    color: #DDC144;
+}
+
 .side-nav-item {
-    padding-top: 16px;
+    margin-top: 16px;
+    padding: 5px;
 }
 
 .portfolio-container {
@@ -200,8 +323,7 @@ div {
     position: relative;
     margin-top: 5%;
     top: 0;
-    /*max-height: calc(100% - 48px - 5%);*/
-    max-width: 65%;
+    max-width: 70%;
 }
 
 #portfolio .container {
@@ -221,10 +343,6 @@ div {
     width: 100%;
 }
 
-/*.wrapper {
-    position: absolute;
-}
-*/
 
 
 /*Contact*/
@@ -263,11 +381,12 @@ div {
 
 #design {
    /* position: relative;*/
+   display: none;
 }
 
 #fine-art {
  /*   position: relative;*/
-    display: none;
+ /*   display: none;*/
 }
 
 #photography {
@@ -280,5 +399,5 @@ div {
 }
 
 @media (max-width: 667px) {
-    
+
 }
