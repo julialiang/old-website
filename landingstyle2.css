@@ -369,7 +369,7 @@ img.img-scaled {
 #portfolio {
     background: #CBD8D7;
     width: 100%;
-    min-height: calc(100% -48px);
+    height: calc(100% -48px);
     position: relative;
 }
 
@@ -501,9 +501,39 @@ img.img-scaled {
 
 }
 
+@media (max-width: 959px) {
+    #portfolio {
+        background: #CBD8D7;
+        width: 100%;
+        height: 180%;
+        position: relative;
+    }
+
+    #side-nav {
+      text-align: left;
+      width: 100px;
+      position: relative;
+      margin-left: 10%;
+      color: white;
+      margin-top: 5%;
+      z-index: 4;
+      float: left;
+    }
+
+}
+
+/*@media (max-width: 748px) {
+    #portfolio {
+        background: #CBD8D7;
+        width: 100%;
+        height: 100px;
+        position: relative;
+    }
+}
+*/
 @media (max-width: 667px) {
     #background {
-        background: url('assets/img/aboutme800.png');
+        background: url('assets/img/iphone.png');
         -webkit-background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -514,6 +544,59 @@ img.img-scaled {
         left: 0;
         margin: 0 auto;
     }
+}
+
+
+@media (max-height: 413px) {
+    #about {
+        background: white;
+        width: 100%;
+        height: 180%;
+        position: relative;
+    }
+
+}
+
+@media (max-height: 210px) {
+    #about {
+        background: white;
+        width: 100%;
+        height: 200%;
+        position: relative;
+    }
+
+   /* #portfolio {
+        background: #CBD8D7;
+        width: 100%;
+        height: 500000%;
+        position: relative;
+    }*/
+
+}
+
+@media (max-height: 571px) {
+   #portfolio {
+        background: #CBD8D7;
+        width: 100%;
+        height: 180%;
+        position: relative;
+    }
+
+}
+
+@media (max-height: 277px) {
+   #portfolio {
+        background: #CBD8D7;
+        width: 100%;
+        height: 270%;
+        position: relative;
+    }
+
+    #contact {
+        background-color: #DDC144;
+        height: 150%;
+    }
+
 }
 
 /*@media(1360, 575)*/
